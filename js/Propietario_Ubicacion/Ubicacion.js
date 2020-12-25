@@ -53,8 +53,8 @@ firebase.auth().onAuthStateChanged(function (user) {
 								var infowindow = new google.maps.InfoWindow();
 								var marker = new google.maps.Marker({
 									position: {
-										lat: doc.data().ubicacion.latitude,
-										lng: doc.data().ubicacion.longitude
+										lat: parseFloat(doc.data().ubicacion.latitude),
+										lng: parseFloat(doc.data().ubicacion.longitude)
 									},
 									icon: {
 										url: "../../Diseno/IMG/taxi.svg",
